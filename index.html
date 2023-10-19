@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,18 +8,76 @@
   <base href="/">
 
   <style>
-    html,
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      font-family: sans-serif;
+      font-family: Roboto,"Franklin Gothic Medium",Tahoma,sans-serif;
+      font-weight: bold;
       background-color: #ededed;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px; /* Adjust the spacing between squares as needed */
+    }
+
+    .grid-item {
+      background-color: #1e407c; /* You can change this as needed */
+      aspect-ratio: 1 / 1; /* Ensures squares */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
     }
   </style>
   <title>polaris-tile-fact</title>
 </head>
 
 <body>
+  <section class="power-facts-wrap" style="background-color: #EEF3F7;">
+    <div class="container">
+      <div class="power-facts">
+        <h2 class="double-slash">Our community of Penn Staters</h2>
+        <div class="grid-container">
+          <div class="grid-item">
+            <h3>88,000+ students</h3>
+          </div>
+          <div class="grid-item">
+            <h3>58%</h3>
+            <p>Of students are Pennsylvania residents.</p>
+          </div>
+          <div class="grid-item">
+            <h3>Students from 50 states and 145 countries</h3>
+          </div>
+          <div class="grid-item">
+            <h3>Nearly 10,000 international students</h3>
+          </div>
+          <div class="grid-item">
+            <h3>39%</h3>
+            <p>Of students are from diverse backgrounds.</p>
+          </div>
+          <div class="grid-item">
+            <h3>7,900+ faculty across all campuses</h3>
+          </div>
+          <div class="grid-item">
+            <h3>759,000+ alumni</h3>
+          </div>
+          <div class="grid-item">
+            <a href="https://admissions.psu.edu/apply/statistics/" class="card-link">
+              <h3>Check out Undergraduate Admissions statistics</h3>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="https://datadigest.psu.edu/" class="card-link">
+              <h3>See Penn State's Data Digest dashboards</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <polaris-tile-fact></polaris-tile-fact>
 
   <script type="module" src="./src/polaris-tile-fact.js"></script>
