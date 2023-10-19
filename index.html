@@ -11,24 +11,40 @@
     html, body {
       margin: 0;
       padding: 0;
-      font-family: Roboto,"Franklin Gothic Medium",Tahoma,sans-serif;
-      font-weight: bold;
+      font-family: sans-serif;
       background-color: #ededed;
+      height: 100%;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
     }
 
     .grid-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px; /* Adjust the spacing between squares as needed */
+      grid-auto-rows: 1fr;
+      gap: 10px; 
+      max-width: 400px; 
     }
 
     .grid-item {
-      background-color: #1e407c; /* You can change this as needed */
-      aspect-ratio: 1 / 1; /* Ensures squares */
+      background-color: #1e407c; 
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
+      padding: 20px; 
+      box-sizing: border-box; 
+    }
+
+   
+    .grid-item h3, .grid-item p, .grid-item a {
+      text-align: center;
+      margin: 0;
     }
   </style>
   <title>polaris-tile-fact</title>
@@ -78,7 +94,7 @@
     </div>
   </section>
 
-
+  <polaris-tile-fact></polararis-tile-fact>
 
   <script type="module" src="./src/polaris-tile-fact.js"></script>
 </body>
